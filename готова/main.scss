@@ -1,0 +1,51 @@
+$text-color: #122947;
+$accent-color: #F4F1ED;
+$accent-color-2:#9A9DA0;
+
+$accent-font: "Releway", sans-serif;
+$accent-font2: "M PLUS 1", sans-serif;
+
+%button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    border: 1px solid;
+    border-color: #B3BAC1;
+}
+
+@mixin fontz($s, $w, $f){
+    font-size: $s;
+    font-weight: $w;
+    font-family: $f;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "M PLUS 1", sans-serif;
+    color: $text-color;
+    background-color: #F8F8F6;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+a{
+    text-decoration-line: none; 
+    color: $text-color;
+}
+
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/story";
+@import "blocks/care";
+@import "blocks/subscribe";
+@import "blocks/footer";
+@import "blocks/tabs";
+@import "blocks/accordion";
+@import "blocks/filter";
+@import "blocks/slider";
+@import "blocks/modal";

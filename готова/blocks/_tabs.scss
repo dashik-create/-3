@@ -1,0 +1,99 @@
+.tabs{
+
+    h1{
+        @include fontz (28px, 400, $accent-font2);
+        text-align: center;
+    }
+    max-width: 750px;
+    margin: 3% auto;
+
+    &__header{
+        display: flex;
+        border-bottom: 1px solid #eee;
+    }
+
+    .tab-nav-item{
+        padding: 10px 5px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s all;
+    }
+    .tab-nav-item.active{
+        border-bottom: 1px solid rgb(192, 192, 192);
+        background: $accent-color;
+    }
+
+
+    &__content{
+        margin-top: 5%;
+        display: flex;
+        h1{
+            @include fontz (26px, 500, $accent-font);
+            margin: 0;
+        }
+        h2{
+            @include fontz (14px, 400, $accent-font2);
+            color: $accent-color-2;
+            margin: 3% 0 3% 0;
+        }
+    }
+    &__text{
+        margin: auto auto auto 5%;
+        max-width: 340px;
+    }
+
+    .tab__content{
+        display: none;
+    }
+    .tab__content.active{
+        display: block;
+    }
+}
+@media(max-width:426px){
+    .tabs{
+        h1{
+            @include fontz (24px, 400, $accent-font2);
+
+        }
+        &__content{
+            display: block;
+
+        }
+
+        &__img{
+            display: flex;
+            img{
+                margin: auto;
+                width: 80%;
+            }
+        }
+        &__text{
+            margin: auto;
+            width: 340px;
+            h1,h2{
+                text-align: center;
+            }
+            h1{
+                margin-top: 5%;
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media(max-width:376px){
+    .tabs{
+
+        &__img{
+            img{
+                width: 70%;
+            }
+        }
+        p{
+            font-size: 14px;
+        }
+        .tab-nav-item{
+            padding: 10px 0px;
+        }
+    }
+}

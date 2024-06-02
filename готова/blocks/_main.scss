@@ -1,0 +1,106 @@
+.main{
+    display: flex;
+    padding: 5% 3% 5% 3%;
+
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1%;
+        margin: auto;
+    }
+    &__card{
+        img{
+            width: 100%;
+        }
+        p{
+            font-weight: 500;
+        }
+    }
+    &__text{
+        text-align: center;
+        h1{
+            font-family: $accent-font;
+            font-size: 58px;
+            font-weight: 500;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+    .button{
+        margin: 40px auto;
+        @extend %button;
+        width: 141px;
+        height: 40px;
+
+    }
+}
+@media(max-width:900px){
+    .main__text{
+        h1{
+        font-size: 48px;
+    }
+    p{
+        font-size: 14px;
+    }
+}
+}
+@media(max-width:650px){
+    .main__text{
+        h1{
+        font-size: 38px;
+    }
+    .button{
+        margin: 20px auto;
+    }
+}
+}
+@media(max-width:540px){
+    .main__text{
+        h1{
+        font-size: 28px;
+    }
+    .button{
+        margin: 10px auto;
+        width: 110px;
+        height: 25px;
+    }
+}
+}
+@media(max-width:455px){
+    .main__text{
+        h1{
+        font-size: 24px;
+        }
+        .button{
+            width: 100px;
+            height: 20px;
+        }
+        p{
+            font-size: 12px;
+        }
+}
+    .main__card{
+        p{
+            font-size: 12px;
+        }
+    }
+}
+@media(max-width:380px){
+    .main__text{
+        h1{
+        margin: 0;
+        }
+        .button{
+            width: 80px;
+        }
+        p{
+            font-size: 10px;
+        }
+}
+    .main__card{
+        p{
+            font-size: 10px;
+        }
+    }
+}
